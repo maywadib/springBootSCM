@@ -20,4 +20,8 @@ public class CoffeeDbService {
 	public List<Coffee> getAllCoffee(){
 		return this.coffeeRepository.findAll();
 	}
+	
+	public Coffee insertCoffee(Coffee coffee) {
+		return this.coffeeRepository.insert(coffee);
+	}
 }

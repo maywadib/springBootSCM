@@ -1,10 +1,17 @@
 package project.coffeeSCM.MongoSpringCoffee.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
 import project.coffeeSCM.MongoSpringCoffee.model.Logs;
 
 public interface LogsRepository extends MongoRepository<Logs, Integer>{
+	
+	@Query(value="{'empId': {$eq : ?}}")
+	List<Logs> getLogForEmployee(String empId);
+	
 	
 //query -> get popular coffee
 //	db.logs.aggregate([

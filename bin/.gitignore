@@ -29,3 +29,27 @@ build/
 
 ### VS Code ###
 .vscode/
+/.gitignore
+/.mvn/
+/WiredTiger
+/WiredTiger.lock
+/WiredTiger.turtle
+/WiredTiger.wt
+/WiredTigerLAS.wt
+/_mdb_catalog.wt
+/collection-0-502996164374729637.wt
+/collection-11-502996164374729637.wt
+/collection-2-502996164374729637.wt
+/collection-4-502996164374729637.wt
+/collection-7-502996164374729637.wt
+/collection-9-502996164374729637.wt
+/diagnostic.data/
+/index-1-502996164374729637.wt
+/index-10-502996164374729637.wt
+/index-12-502996164374729637.wt
+/index-3-502996164374729637.wt
+/index-5-502996164374729637.wt
+/index-6-502996164374729637.wt
+/index-8-502996164374729637.wt
+/journal/
+/src/

@@ -23,20 +23,24 @@ public class LogsController {
 	@Autowired
 	private LogsDbService logsService;
 	
-	@GetMapping("/db/logs/{empId}")
+	@GetMapping("/db/logs/favorite/{empId}")
 	public Coffee getFavoriteCoffee(@PathVariable String empId){
 		return this.logsService.getFavoriteCoffee(empId);
 	}
 	
-	@GetMapping("/db/logs")
+	@GetMapping("/db/logs/popular")
 	public Coffee getPopularCoffee( ) {
 		return this.logsService.getPopularCoffee(); 
 	}
 	
+	@GetMapping("/db/logs")
+	public List<Logs> getAllLogs(){
+		return this.logsService.getAllLogs();
+	}
 	
 	@PutMapping("/db/logs")
-	public Logs insertEmployee(@RequestBody Logs logs) {
-		return 	this.logsService.insertLogs(logs);
+	public Logs insertEmployee(@RequestBody Logs log) {
+		return 	this.logsService.insertLogs(log);
 	}
 	
 }
